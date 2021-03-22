@@ -1,0 +1,24 @@
+.logo {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.192;
+  /* identical to box height */
+
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: #000000;
+  &--blue {
+    color: $accent-color;
+  }
+  &--on-black {
+    color: #ffffff;
+    padding-bottom: 20px;
+    display: block;
+  }
+}
+
+// .logo--blue {
+//   color: $focuscolor;
+// }

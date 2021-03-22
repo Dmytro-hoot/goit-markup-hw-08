@@ -1,0 +1,56 @@
+.page-what-we-are-doing {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
+
+.page-what-we-are-doing {
+  padding-bottom: 94px;
+
+  &__list {
+    display: flex;
+    margin: -15px;
+  }
+  &__tittle {
+    margin-bottom: 50px;
+  }
+
+  &__item {
+    position: relative;
+    margin: 15px;
+  }
+
+  &__desc {
+    bottom: 0%;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.142;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: #ffffff;
+
+    background: rgba(47, 48, 58, 0.8);
+    height: 70px;
+    width: 100%;
+    padding: 27px;
+
+    position: absolute;
+  }
+}
+
+.tittle {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.166;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: #212121;
+}

@@ -1,0 +1,118 @@
+.page-properties {
+  &__list {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -15px;
+    }
+  }
+
+  &__item {
+    @media screen and (max-width: 767px) {
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      width: calc((100% - 2 * 30px) / 2);
+      margin: 15px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: calc((100% - 4 * 30px) / 4);
+      margin: 15px;
+    }
+  }
+
+  &__svg {
+    width: 65px;
+    height: 70px;
+    margin: 25px 102px;
+  }
+  &__box {
+    background: $features-bgc;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    height: 120px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+
+    color: $title-color;
+    font-size: $main-font-size;
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: $main-letter-spacing;
+    text-transform: uppercase;
+
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
+  }
+
+  &__desc {
+    margin-bottom: 0;
+    font-size: $main-font-size;
+    line-height: 1.71;
+    letter-spacing: $main-letter-spacing;
+  }
+}
+
+// .page-properties {
+//   padding-top: 94px;
+//   padding-bottom: 94px;
+
+//   &__svg {
+//     width: 65px;
+//     height: 70px;
+//     margin: 25px 102px;
+//   }
+//   &__box {
+//     background: #f5f4fa;
+//     border-radius: 4px;
+//     margin-bottom: 30px;
+//   }
+
+//   &__list {
+//     display: flex;
+//     margin: -15px;
+//   }
+
+//   &__item {
+//     margin: 15px;
+//     width: 270px;
+//   }
+//   &__tittle {
+//     font-family: Roboto;
+//     font-style: normal;
+//     font-weight: bold;
+//     font-size: 14px;
+//     line-height: 1.142;
+//     letter-spacing: 0.03em;
+//     text-transform: uppercase;
+
+//     color: #212121;
+//     margin-bottom: 10px;
+//   }
+
+//   &__desc {
+//     font-family: Roboto;
+//     font-style: normal;
+//     font-weight: normal;
+//     font-size: 14px;
+//     line-height: 1.714;
+//     /* or 171% */
+
+//     letter-spacing: 0.03em;
+
+//     color: #757575;
+//   }
+// }

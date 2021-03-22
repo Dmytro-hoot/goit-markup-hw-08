@@ -1,0 +1,99 @@
+.porfolio-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+
+  &__project-box {
+    padding: 20px 24px;
+  }
+
+  &__item {
+    margin: 15px;
+    border: 1px solid #eeeeee;
+    box-sizing: border-box;
+    width: 370px;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__tittle {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 2;
+    /* identical to box height, or 200% */
+
+    letter-spacing: 0.06em;
+
+    color: #212121;
+
+    margin-bottom: 4px;
+  }
+
+  &__img-box {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__desc {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(33, 150, 243, 0.9);
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 1.556;
+    /* or 156% */
+
+    letter-spacing: 0.03em;
+
+    color: #ffffff;
+    padding: 24px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    left: 0;
+    top: 0;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    transform: translateY(101%);
+  }
+
+  &__link:hover &__desc,
+  &__link:focus &__desc {
+    transform: translateY(0);
+  }
+
+  &__mini-desc {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.875;
+    /* identical to box height, or 187% */
+
+    letter-spacing: 0.03em;
+
+    color: #757575;
+  }
+
+  &__link {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  &__link:focus,
+  &__link:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}

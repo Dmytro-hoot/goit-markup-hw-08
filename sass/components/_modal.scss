@@ -1,0 +1,255 @@
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  padding: 40px;
+
+  background-color: $primary-white-color;
+
+  transform: translate(-50%, -50%) scale(0.9);
+
+  transition: transform $transition-duration $transition-timing-function;
+
+  @media screen and (max-width: 1199px) {
+    width: 100%;
+    max-width: 450px;
+    height: 95%;
+    max-height: 609px;
+
+    overflow: scroll;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+  }
+}
+
+.modal {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: transform 750ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &__close-btn {
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+  }
+
+  &__close-btn-svg {
+    height: 11px;
+    width: 11px;
+  }
+
+  &__close-btn:hover &__close-btn-svg,
+  &__close-btn:focus &__close-btn-svg {
+    fill: #2196f3;
+  }
+
+  &__tittle {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: #212121;
+
+    margin-bottom: 12px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__input-label {
+    margin-bottom: 4px;
+  }
+
+  &__input-area {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.142;
+    letter-spacing: 0.01em;
+
+    color: #212121;
+
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    padding-left: 42px;
+
+    cursor: pointer;
+
+    transition: fill 750ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__input-label {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  &__input-name {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.166;
+    /* identical to box height */
+
+    letter-spacing: 0.01em;
+
+    color: #757575;
+
+    margin-bottom: 4px;
+  }
+
+  &__textarea {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.142;
+    letter-spacing: 0.01em;
+
+    color: #212121;
+
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    resize: none;
+
+    margin-bottom: 20px;
+
+    padding: 16px;
+
+    cursor: pointer;
+
+    transition: fill 750ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__send-btn {
+    align-self: center;
+    width: 200px;
+    height: 50px;
+    background: #2196f3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    /* identical to box height, or 187% */
+
+    letter-spacing: 0.06em;
+
+    cursor: pointer;
+
+    color: #ffffff;
+  }
+
+  &__icon {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    left: 15px;
+    transform: translateY(2px);
+    fill: #212121;
+
+    transition: fill 750ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__input-area:focus ~ &__icon {
+    fill: #2196f3;
+  }
+
+  &__input-area:focus,
+  &__textarea:focus {
+    outline: none;
+    border: 1px solid #2196f3;
+    border-radius: 4px;
+  }
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.2);
+}
+
+.conf-box {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.714;
+  /* identical to box height, or 171% */
+
+  letter-spacing: 0.03em;
+
+  color: #757575;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.714;
+  }
+}
+
+.conf-box__checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.conf-box__icon-check {
+  width: 16px;
+  height: 15px;
+  background-size: contain;
+  fill: transparent;
+
+  border: 2px solid #212121;
+  border-radius: 2px;
+
+  transition: all 750ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.conf-box__checkbox:checked ~ .conf-box__icon-check {
+  background-color: #2196f3;
+  fill: #2196f3;
+  border: transparent;
+}

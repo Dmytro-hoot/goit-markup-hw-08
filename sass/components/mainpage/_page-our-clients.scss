@@ -1,0 +1,164 @@
+.page-our-clients {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+
+  &__item {
+    height: 90px;
+
+    width: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+
+    @media screen and (min-width: 768px) {
+      width: calc((100% - 3 * 30px) / 3);
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: calc((100% - 6 * 30px) / 6);
+    }
+  }
+
+  &__link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid $social-link-color;
+    border-radius: 4px;
+
+    color: $social-link-color;
+
+    transition: color $transition-duration $transition-timing-function,
+      border $transition-duration $transition-timing-function;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+      border: 1px solid $accent-color;
+    }
+  }
+
+  &__logo1-svg {
+    height: 49px;
+    width: 44px;
+    fill: currentColor;
+  }
+
+  &__logo2-svg {
+    height: 52px;
+    width: 40px;
+    fill: currentColor;
+  }
+
+  &__logo3-svg {
+    height: 42px;
+    width: 41px;
+    fill: currentColor;
+  }
+
+  &__logo4-svg {
+    height: 42px;
+    width: 79px;
+    fill: currentColor;
+  }
+
+  &__logo5-svg {
+    height: 47px;
+    width: 59px;
+    fill: currentColor;
+  }
+
+  &__logo6-svg {
+    height: 45px;
+    width: 88px;
+    fill: currentColor;
+  }
+}
+
+// .page-our-clients {
+//   &__tittle {
+//     margin-bottom: 50px;
+//   }
+
+//   &__link {
+//     display: flex;
+//     height: 90px;
+//     width: 170px;
+//     align-items: center;
+//     justify-content: center;
+//     border: 1px solid currentColor;
+//     box-sizing: border-box;
+//     border-radius: 4px;
+//     color: #afb1b8;
+
+//     transition-duration: 250ms;
+//     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+//   }
+
+//   &__logo1-svg {
+//     height: 49px;
+//     width: 44px;
+//     fill: currentColor;
+//   }
+
+//   &__logo2-svg {
+//     height: 52px;
+//     width: 40px;
+//     fill: currentColor;
+//   }
+
+//   &__logo3-svg {
+//     height: 42px;
+//     width: 41px;
+//     fill: currentColor;
+//   }
+
+//   &__logo4-svg {
+//     height: 42px;
+//     width: 79px;
+//     fill: currentColor;
+//   }
+
+//   &__logo5-svg {
+//     height: 47px;
+//     width: 59px;
+//     fill: currentColor;
+//   }
+
+//   &__logo6-svg {
+//     height: 45px;
+//     width: 88px;
+//     fill: currentColor;
+//   }
+// }
+
+// //   padding-bottom: 94px;
+// //   padding-top: 94px;
+
+// //   &__tittle {
+// //     margin-bottom: 50px;
+// //   }
+
+// //   &__list {
+// //     display: flex;
+// //     justify-content: space-between;
+// //   }
+
+// //   &__link {
+// //     display: flex;
+// //     height: 90px;
+// //     width: 170px;
+// //     align-items: center;
+// //     justify-content: center;
+// //     border: 1px solid currentColor;
+// //     box-sizing: border-box;
+// //     border-radius: 4px;
+// //     color: #afb1b8;
+
+// //     transition-duration: 250ms;
+// //     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+// //   }
