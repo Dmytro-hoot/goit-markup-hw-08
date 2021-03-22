@@ -1318,6 +1318,10 @@ section {
   padding-bottom: 94px;
 }
 
+.page-portfolio__item:not(:last-child) {
+  margin-right: 8px;
+}
+
 .page-portfolio__btn {
   font-family: Roboto;
   font-style: normal;
@@ -1332,17 +1336,21 @@ section {
   background-color: #f5f4fa;
   cursor: pointer;
   padding: 6px 22px;
-  margin-bottom: 50px;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (max-width: 767px) {
+  .page-portfolio__btn {
+    margin-bottom: 15px;
+  }
+}
+
 .page-portfolio__btn:hover, .page-portfolio__btn:focus {
   color: #ffffff;
   background: #2196f3;
-  /* shadow-middle */
   -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
@@ -1352,38 +1360,54 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: 0;
+  margin-bottom: 50px;
 }
 
-.page-portfolio__item:not(:last-child) {
-  margin-right: 8px;
+@media screen and (min-width: 768px) {
+  .page-portfolio__nav-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
 }
 
-.porfolio-gallery {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: -15px;
+@media screen and (min-width: 1200px) {
+  .page-portfolio__nav-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: 0;
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .porfolio-gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
 .porfolio-gallery__project-box {
   padding: 20px 24px;
-}
-
-.porfolio-gallery__item {
-  margin: 15px;
-  border: 1px solid #eeeeee;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 370px;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .porfolio-gallery__tittle {
@@ -1392,7 +1416,6 @@ section {
   font-weight: 500;
   font-size: 18px;
   line-height: 2;
-  /* identical to box height, or 200% */
   letter-spacing: 0.06em;
   color: #212121;
   margin-bottom: 4px;
@@ -1413,7 +1436,6 @@ section {
   font-weight: normal;
   font-size: 18px;
   line-height: 1.556;
-  /* or 156% */
   letter-spacing: 0.03em;
   color: #ffffff;
   padding: 24px;
@@ -1463,6 +1485,38 @@ section {
 .porfolio-gallery__link:focus, .porfolio-gallery__link:hover {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.porfolio-gallery__item {
+  border: 1px solid #eeeeee;
+  height: auto;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (max-width: 767px) {
+  .porfolio-gallery__item {
+    width: 100%;
+  }
+  .porfolio-gallery__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .porfolio-gallery__item {
+    width: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .porfolio-gallery__item {
+    width: calc((100% - 3 * 30px) / 3);
+    margin: 15px;
+  }
 }
 
 @media screen and (max-width: 767px) {
