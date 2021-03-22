@@ -61,6 +61,13 @@
     color: $primary-text-color;
     margin-bottom: 16px;
   }
+
+  &__tittle {
+    margin-bottom: 30px;
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 50px;
+    }
+  }
 }
 
 // .page-our-team {
