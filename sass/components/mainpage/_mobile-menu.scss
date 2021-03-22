@@ -38,6 +38,10 @@
       right: 15px;
       padding: 11px 10.33px;
     }
+    &:hover .icon-menu,
+    &:focus .icon-menu {
+      fill: $accent-color;
+    }
   }
 
   .icon-menu {

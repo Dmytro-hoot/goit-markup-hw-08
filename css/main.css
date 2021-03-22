@@ -518,6 +518,15 @@ section {
     height: 4px;
     width: 100%;
   }
+}
+
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .nav__link.active::after {
+    bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 768px) {
   .nav__link::after {
     position: absolute;
     bottom: -4px;
@@ -534,9 +543,24 @@ section {
     -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
             transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
+}
+
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .nav__link::after {
+    bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 768px) {
   .nav__link:hover:after, .nav__link:focus:after {
     opacity: 1;
     background: #2196f3;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-header {
+    padding: 0px;
   }
 }
 
@@ -658,6 +682,19 @@ section {
   }
 }
 
+.page-footer__left-side {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 @media screen and (max-width: 1199px) {
   .page-footer__left-side {
     text-align: center;
@@ -676,21 +713,10 @@ section {
   .page-footer__left-side {
     padding-right: 13px;
     margin-right: 70px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
-}
-
-.page-footer__left-side {
-  margin-bottom: 60px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .page-footer__middle-side {
@@ -707,6 +733,30 @@ section {
           align-items: center;
 }
 
+@media screen and (max-width: 1199px) {
+  .page-footer__middle-side {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .page-footer__middle-side {
+    width: calc((100% - 30px) / 2);
+    margin-right: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-footer__middle-side {
+    padding-right: 13px;
+    margin-right: 70px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
 .page-footer__right-side {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -718,6 +768,30 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (max-width: 1199px) {
+  .page-footer__right-side {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .page-footer__right-side {
+    width: calc((100% - 30px));
+    margin-right: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-footer__right-side {
+    padding-right: 13px;
+    margin-right: 70px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
 }
 
 .page-footer__adress {
@@ -796,7 +870,14 @@ section {
   margin-left: 10px;
 }
 
+@media screen and (max-width: 767px) {
+  .page-footer__form {
+    width: 100%;
+  }
+}
+
 .page-footer__form-box {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -807,6 +888,15 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .page-footer__form-box {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .page-footer__form-input {
@@ -824,6 +914,12 @@ section {
   .page-footer__form-input {
     width: 100%;
     margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .page-footer__form-input {
+    width: 450px;
   }
 }
 
@@ -1648,6 +1744,10 @@ section {
     top: 10px;
     right: 15px;
     padding: 11px 10.33px;
+  }
+  .mobile-menu-btn:hover .icon-menu,
+  .mobile-menu-btn:focus .icon-menu {
+    fill: #2196f3;
   }
   .icon-menu {
     fill: currentColor;

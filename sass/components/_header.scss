@@ -69,6 +69,9 @@
       border-radius: 2px;
       height: 4px;
       width: 100%;
+      @media screen and (min-width: 1200px) {
+        bottom: 0px;
+      }
     }
     &__link::after {
       position: absolute;
@@ -81,6 +84,9 @@
       border-radius: 2px;
       height: 4px;
       width: 100%;
+      @media screen and (min-width: 1200px) {
+        bottom: 0px;
+      }
 
       transition-property: background-color;
       transition-duration: 250ms;
@@ -91,6 +97,12 @@
       opacity: 1;
       background: #2196f3;
     }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-header {
+    padding: 0px;
   }
 }
 .active {
