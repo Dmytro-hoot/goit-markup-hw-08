@@ -444,6 +444,10 @@ section {
           align-items: center;
 }
 
+.page-header {
+  border-bottom: 1px solid #ececec;
+}
+
 @media screen and (max-width: 767px) {
   .page-header {
     padding: 10px 0;
@@ -459,7 +463,6 @@ section {
 @media screen and (min-width: 768px) {
   .page-header {
     padding: 26px 0;
-    border-bottom: 1px solid #ececec;
   }
   .nav {
     display: -webkit-box;
@@ -758,6 +761,7 @@ section {
   .page-footer__middle-side {
     padding-right: 13px;
     margin-right: 70px;
+    margin-bottom: 0px;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -1490,6 +1494,7 @@ section {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  color: #757575;
 }
 
 @media screen and (max-width: 1199px) {
